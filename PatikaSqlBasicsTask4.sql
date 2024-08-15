@@ -1,23 +1,23 @@
--- 1. film tablosunda bulunan replacement_cost sütununda bulunan birbirinden farklı değerleri sıralayınız.
+-- 1. Select distinct values from the replacement_cost column in the film table and order them.
 SELECT DISTINCT replacement_cost
 FROM film
 ORDER BY replacement_cost;
 
--- 2. film tablosunda bulunan replacement_cost sütununda birbirinden farklı kaç tane veri vardır?
+-- 2. Count the number of distinct values in the replacement_cost column in the film table.
 SELECT COUNT(DISTINCT replacement_cost)
 FROM film;
 
--- 3. film tablosunda bulunan film isimlerinde (title) kaç tanesini T karakteri ile başlar ve aynı zamanda rating 'G' ye eşittir?
+-- 3. Count the number of films where the title starts with 'T' and the rating is 'G'.
 SELECT COUNT(*)
 FROM film
 WHERE title LIKE 'T%' AND rating='G';
 
--- 4. country tablosunda bulunan ülke isimlerinden (country) kaç tanesi 5 karakterden oluşmaktadır?
+-- 4. Count the number of country names that are exactly 5 characters long in the country table.
 SELECT COUNT(*)
 FROM country
 WHERE country LIKE '_____';
 
--- 5. city tablosundaki şehir isimlerinin kaç tanesi 'R' veya r karakteri ile biter?
+-- 5. Count the number of city names that end with 'R' or 'r' in the city table.
 SELECT COUNT(*)
 from city
 WHERE city ~~* '%R';
